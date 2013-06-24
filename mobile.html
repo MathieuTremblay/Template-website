@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mathieu Tremblay</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script>
+			$( document ).on( "pageinit", "#demo-page", function() {
+							 $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+											  // We check if there is no open panel on the page because otherwise
+											  // a swipe to close the left panel would also open the right panel (and v.v.).
+											  // We do this by checking the data that the framework stores on the page element (panel: open).
+											  if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+											  if ( e.type === "swipeleft"  ) {
+											  $( "#right-panel" ).panel( "open" );
+											  } else if ( e.type === "swiperight" ) {
+											  $( "#left-panel" ).panel( "open" );
+											  }
+											  }
+											  });
+							 });
+		</script>
+		<style>
+			/* Swipe works with mouse as well but often causes text selection. */
+			#demo-page * {
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			/* Arrow only buttons in the header. */
+			#demo-page .ui-header .ui-btn {
+				background: none;
+				border: none;
+				top: 9px;
+			}
+			#demo-page .ui-header .ui-btn-inner {
+				border: none;
+			}
+			/* Content styling. */
+			dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
+			dt { font-size: 2em; font-weight: bold; }
+			dt span { font-size: .5em; color: #777; margin-left: .5em; }
+			dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+			.back-btn { float: right; margin: 0 2em 1em 0; }
+		</style>
+	</head>
+	<body>
+		
+		<!-- Start of first page -->
+		<div data-role="page" id="accueil" data-theme="c">
+			
+			<div data-role="header">
+				<a href="#left-panel" data-icon="bars" class="ui-btn-left">Menu</a>
+				<h1>Accueil</h1>
+			</div><!-- /header -->
+			
+			<div data-role="content">
+				<!--Content goe's here-->
+			</div><!-- /content -->
+			
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+			<div data-role="panel" id="left-panel" data-theme="b" data-display="push" data-position="left">
+				<a href="#" data-rel="close" data-role="button" data-icon="delete" data-iconpos="right" data-theme="d">Fermer</a><br />
+				<div data-role="collapsible" data-theme="b" data-content-theme="a" data-collapsed="true" data-inset="false" data-iconpos="right">
+					<h4>Tuto</h4>
+					<a href="#tuto-all" data-role="button" data-inset="false" data-theme="d">Tout</a><br />
+					<ul data-role="listview" data-theme="a">
+						<li>
+							<div data-role="collapsible" data-theme="c" data-collapsed="true" data-content-theme="c" data-inset="true" data-iconpos="right">
+								<h4>HTML</h4>
+								<ul data-role="listview" data-theme="d">
+									<li><a href="#">Menu Flottant</a></li>
+									<li><a href="#">Menu interactif</a></li>
+									<li><a href="#">Footer perso</a></li>
+									<li><a href="#">Zone d'inscription</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div data-role="collapsible" data-theme="c" data-content-theme="c" data-inset="true" data-iconpos="right">
+								<h4>CSS</h4>
+								<ul data-role="listview" data-theme="d">
+									<li><a href="#">Menu Flottant</a></li>
+									<li><a href="#">Menu collapsible</a></li>
+									<li><a href="#">Apparition en fondu</a></li>
+									<li><a href="#">CSS3 Animation</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div data-role="collapsible" data-theme="c" data-content-theme="c" data-inset="true" data-iconpos="right">
+								<h4>Javascipt</h4>
+								<ul data-role="listview" data-theme="d">
+									<li><a href="#">Zone De Connexion</a></li>
+									<li><a href="#">Harlem Shake</a></li>
+									<li><a href="#">Effets</a></li>
+									<li><a href="#">jquery</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div data-role="collapsible" data-theme="c" data-content-theme="c" data-inset="true" data-iconpos="right">
+								<h4>jQuery</h4>
+								<ul data-role="listview" data-theme="d">
+									<li><a href="#">Menu</a></li>
+									<li><a href="#">Apparition en fondu</a></li>
+									<li><a href="#">Animation</a></li>
+									<li><a href="#">Mobile</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-theme="b" data-content-theme="c" data-inset="false" data-iconpos="right">
+					<h4>Site</h4>
+					<ul data-role="listview" data-theme="a">
+						<li><a href="#">W3C</a></li>
+						<li><a href="#">Jquery</a></li>
+						<li><a href="#">Mobile</a></li>
+						<li><a href="#">GF-tech</a></li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-theme="b" data-content-theme="c" data-inset="false" data-iconpos="right">
+					<h4>Réseaux Sociaux</h4>
+					<ul data-role="listview" data-theme="a">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Tumblr</a></li>
+						<li><a href="#">Youtube</a></li>
+						<li><a href="#">Google +</a></li>
+					</ul>
+				</div>
+				<br />
+				<a href="#right-panel" data-role="button" data-theme="c">Connexion</a>
+			</div>
+			<div data-role="panel" id="right-panel" data-theme="b" data-display="push" data-position="right">
+				<a href="#" data-rel="close" data-role="button" data-icon="delete" data-iconpos="right" data-theme="b">Fermer</a><br />
+				<form class="userform">
+					<h2>Connexion</h2>
+					<label for="name">Utilisateur</label>
+					<input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+						<label for="password">Mot De Passe:</label>
+						<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+							<div class="ui-grid-a">
+								<div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
+								<div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Save</a></div>
+							</div>
+				</form>
+			</div>
+		</div><!-- /page -->
+		
+		
+		<!-- Start of second pages -->
+	</body>
+</html>

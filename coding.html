@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mathieu Tremblay | Code</title>
+		<meta charset="UTF-8">
+			<script src="password.js" type="text/javascript"></script>
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="fade.js" type="text/javascript"></script>
+			<script src="harlem.js" type="text-javascript"></script>
+			<script>
+				$(document).ready(function(){
+								  $(".ajax-code").click(function(){
+														$.ajax({url:"text.txt",success:function(result){
+															   $("#text").html(result + "<h3>Ce texte est apparu grace a ajax</h3>");
+															   $("#ajax-code").click(function() {
+																					 $("text").fadeOut("slow");
+																					 });
+															   }});
+														});
+								  });
+				
+				
+				</script>
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+				<link href='http://fonts.googleapis.com/css?family=Stalemate|Cabin+Sketch|Caesar+Dressing|Spirax|Special+Elite|Loved+by+the+King|Arizonia|Mystery+Quest' rel='stylesheet' type='text/css'>
+					</head>
+	<body>
+		<aside id="content-side-menu">
+			<div id="menu-side">
+				<ul>
+					<li><a href="accueil.html" class="menu-link" data-color="grey">Accueil</a></li><br />
+					<li><a href="#" class="menu-link" data-color="purple">Picture</a></li><br />
+					<li><a href="social.html" class="menu-link" data-color="yellow">Social</a></li><br />
+					<li><a href="Code.html" class="menu-link" data-color="blue">Coding</a></li><br />
+					<li><a href="#" class="menu-link" data-color="green">Web Site</a></li><br />
+					<li><a href="contact.html" class="menu-link" data-color="red">Contact</a></li><br />
+					<li><a href="#" id="ajax-code" class="menu-link" data-color="purple">Navigateur</a></li><br />
+					<li><a href="color.html" class="menu-link" data-color="grey">Générateur</a></li><br />
+					<li><a href="#" class="menu-link" id="back-top">Haut</a></li><br />
+				</ul>
+			</div>
+		</aside>
+		<aside id="login-right">
+			<div id="login-float">
+				<form name="login">
+					<label for="id"><span class="menu-login-text">Nom D'utilisateur:</span></label><br />
+					<input type="text" class="login-input" name="id" value="" id="p3" placeholder=" Username" title="Veuillez inscrire le nom d'utilisateur."/><br />
+					<br />
+					<label for="password"><span class="menu-login-text">Mot De Passe:</span></label><br />
+					<input type="password" class="login-input" name="password" value="" id="p2" placeholder=" Password" title="Veuillez inscrire votre mot de passe."/><br />
+					<br />
+					<input type="button" value="connexion" class="button" onclick="pasuser(this.form)">
+						</form>
+				<div id="login-ajax-button"></div>
+			</div>
+		</aside>
+		<aside id="harlem-me">
+			<button class="button" onClick="harlem()">Harlem Me!</button>
+		</aside>
+		<header>
+			<div id="title-section">
+				<table>
+					<tbody>
+						<tr><a href="#">
+							<td>
+								<h1>Mathieu Tremblay</h1><br />
+							</td>
+						</a>
+							<td>
+								<div id="login">
+                                    <form name="login">
+	                                    <label for="id"><span class="menu-login-text">Nom D'utilisateur:</span></label>
+	                                    <input type="text" class="login-input" name="id" value="" id="id" placeholder=" Username" title="Veuillez inscrire le nom d'utilisateur."/><br />
+                                        <br />
+                                        <label for="password"><span class="menu-login-text">Mot De Passe:</span></label>
+	                                    <input type="password" class="login-input" name="password" value="" id="password" placeholder=" Password" title="Veuillez inscrire votre mot de passe."/><br />
+                                        <br />
+                                        <input type="button" class="button" value="Connexion" onclick="pasuser(this.form)"/>
+                                    </form>
+                                </div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="menu-header">
+				<ul>
+					<li><a href="accueil.html" class="menu-link" data-color="grey">Accueil</a></li>
+					<li><a href="#" class="menu-link" data-color="purple">Picture</a></li>
+					<li><a href="social.html" class="menu-link" data-color="yellow">Social</a></li>
+					<li><a href="Code.html" class="menu-link" data-color="blue">Coding</a></li>
+					<li><a href="#" class="menu-link" data-color="green">Web Site</a></li>
+					<li><a href="contact.html" class="menu-link" data-color="red">Contact</a></li>
+					<li><a href="#" id="ajax-code" class="menu-link" data-color="purple">Navigateur</a></li>
+					<li><a href="color.html" class="menu-link" data-color="grey">Générateur</a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="container">
+			<!--<div id="text">
+			 <div class="result"></div>
+			 <h2>Ce Texte sera remplac&eacute; par ajax</h2>
+			 </div>-->
+			 <iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/LmHBLqYzimE" frameborder="0" allowfullscreen></iframe>
+			<article>
+				<h1 class="title">Quelle navigateur utilisez-vous?</h1>
+				<div class="code-perso">
+							<div class="code-perso-line">
+								<span>1.</span>
+								<span>2.</span>
+								<span>3.</span>
+							</div>
+							<div class="code-perso-code">
+								<span data-javascript="true">$(document).ready(function () {</span>
+								<span data-javascript="true">$("<code class="code" data-html="true">p</code>").html( "<code class="code" data-html="true">The version number of the rendering engine your browser uses is: &lt;span&gt;</code>" + $.browser.version + "<code class="code" data-html="true">&lt;/span&gt;</code>" );</span>
+								<span data-javascript="true">});</span>
+							</div>
+				</div>
+				<p>Ces trois simple lignes de <code class="JAVASCRIPT">jQuery<span>jQuery est une bibliothèque javascript qui permet d'ajouter un tas de truc vraiment cool de facon très simple! :) Et si ont y va plus wiki ;) : jQuery est une bibliothèque JavaScript libre qui porte sur l'interaction entre JavaScript (comprenant Ajax) et HTML, et a pour but de simplifier des commandes communes de JavaScript. La première version date de janvier 2006.</span></code> vous permette de trouver simplement le navigateur utilisé par le visiteur de votre site web.</p>
+				<p>Cela vous permet de générer des scripts et des feuilles de styles adaptés aux navigateurs et aux versions différentes.</p>
+				<p>Une chose très importante est de ne pas oublier d'inclure la bibliothèque jQuery.</p>
+				<div class="code-perso">
+							<div class="code-perso-line">
+								<span>1.</span>
+							</div>
+							<div class="code-perso-code">
+								<span data-html="true">&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;</span>
+							</div>
+				</div>
+			</article>
+			<div class="separator"></div>
+			<article>
+				<h1 class="title">Menu flottant</h1>
+				<p>Un menu flottant comme vous voyer àa la gauche du site est très facille à réaliser. Vous devez tout d'abort créé votre <code class="HTML">&lt;div&gt;<span>Code HTML</span></code> contenant votre menu.</p>
+				<div class="code-perso">
+							<div class="code-perso-line">
+								<span>1.</span>
+								<span>2.</span>
+								<span>3.</span>
+								<span>4.</span>
+								<span>5.</span>
+								<span>6.</span>
+								<span>7.</span>
+								<span>8.</span>
+								<span>9.</span>
+								<span>10.</span>
+								<span>11.</span>
+								<span>12.</span>
+								<span>13.</span>
+								<span>14.</span>
+							</div>
+							<div class="code-perso-code">
+								<span data-html="true">&lt;aside id="content-side-menu"&gt;</span>
+								<span data-html="true" data-margin="true">&lt;div id="menu-side"&gt;</span>
+								<span data-html="true" data-margin="true2">&lt;ul&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="index.html" class="menu-link" data-color="grey"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="#" class="menu-link" data-color="purple"&gt;Picture&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="social.html" class="menu-link" data-color="yellow"&gt;Social&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="Code.html" class="menu-link" data-color="blue"&gt;Coding&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="#" class="menu-link" data-color="green"&gt;Web Site&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="#" class="menu-link" data-color="red"&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="#" id="ajax-code" class="menu-link" data-color="purple"&gt;Navigateur&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true3">&lt;li&gt;&lt;a href="#" class="menu-link" id="back-top"&gt;Haut&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;</span>
+								<span data-html="true" data-margin="true2">&lt;/ul&gt;</span>
+								<span data-html="true" data-margin="true">&lt;/div&gt;</span>
+								<span data-html="true">&lt;/aside&gt;</p>
+							</div>
+				</div>
+				<p>Et maitenant le CSS! * À insérer dans votre feuille de style <code class="CSS">&lt;link rel="stylesheet" type="text/css" href="stylesheet.css"&gt;<span>Lien qui permet d'appeller une feuille de style qui contient vos code css. À placer entre les balises <code class="HTML">&lt;body&gt;</code>.</span></code>.<p>
+				<div class="code-perso">
+							<div class="code-perso-line">
+								<span>1.</span>
+								<span>2.</span>
+								<span>3.</span>
+								<span>4.</span>
+								<span>5.</span>
+								<span>6.</span>
+								<span>7.</span>
+								<span>8.</span>
+								<span>9.</span>
+								<span>10.</span>
+								<span>11.</span>
+								<span>12.</span>
+								<span>13.</span>
+							</div>
+							<div class="code-perso-code">
+								<span data-css="true">aside#content-side-menu {</span>
+								<span data-css="true" data-margin="true">left: 10px;</span>
+								<span data-css="true" data-margin="true">top: 20px;</span>
+								<span data-css="true" data-margin="true">position: fixed;</span>
+								<span data-css="true" data-margin="true">width: 180px;</span>
+								<span data-css="true" data-margin="true">padding: 5px;</span>
+								<span data-css="true" data-margin="true">-webkit-border-radius: 15px;</span>
+								<span data-css="true" data-margin="true">-moz-border-radius: 15px;</span>
+								<span data-css="true" data-margin="true">border-radius: 15px;</span>
+								<span data-css="true" data-margin="true">background-color: rgba(0, 0, 0, 0.3);</span>
+								<span data-css="true" data-margin="true">border-left: 2px solid #fff;</span>
+								<span data-css="true" data-margin="true">border-right: 2px solid #fff;</span>
+								<span data-css="true">}</span>
+							</div>
+					</div>
+				<p>La propriétée <code class="CSS">position: fixed;<span>Code CSS</span></code> située à la ligne 4 va permettre au <code class="HTML">&lt;aside&gt;<span>Code HTML</span></code> de garder leur position initial.</p>
+				<p>Et maintenant, la touche final!</p>
+				<p>Nous ajouterons un code jQuery qui aura pour effet de faire apparaitre notre menu lorsqu'il sera situé a une certaine distance du dessus de la page.</p>
+				<div class="code-perso">
+							<div class="code-perso-line">
+								<span>1.</span>
+								<span>2.</span>
+								<span>3.</span>
+								<span>4.</span>
+								<span>5.</span>
+								<span>6.</span>
+								<span>7.</span>
+								<span>8.</span>
+								<span>9.</span>
+								<span>10.</span>
+								<span>11.</span>
+								<span>12.</span>
+								<span>13.</span>
+								<span>14.</span>
+								<span>15.</span>
+								<span>16.</span>
+								<span>17.</span>
+								<span>18.</span>
+							</div>
+							<div class="code-perso-code">
+								<span data-javascript="true">$(document).ready(function () {</span>
+								<span data-javascript="true" data-margin="true">$("<code class="code" data-html="true">#content-side-menu</code>, <code class="code" data-html="true">#login-right</code>").hide();</span>
+								<span data-javascript="true" data-margin="true">$(function () {</span>
+								<span data-javascript="true" data-margin="true">$(window).scroll(function () {</span>
+								<span data-javascript="true" data-margin="true2">if ($(this).scrollTop() > 193) {</span>
+								<span data-javascript="true" data-margin="true2">$('<code class="code" data-html="true">#content-side-menu</code>, <code class="code" data-html="true">#login-right</code>').fadeIn();</span>
+								<span data-javascript="true" data-margin="true2">} else {</span>
+								<span data-javascript="true" data-margin="true2">$('<code class="code" data-html="true">#content-side-menu</code>, <code class="code" data-html="true">#login-right</code>').fadeOut();</span>
+								<span data-javascript="true" data-margin="true2">}</span>
+								<span data-javascript="true" data-margin="true2">}):</span>
+								<span data-javascript="true" data-margin="true">$('#back-top').click(function () {</span>
+								<span data-javascript="true" data-margin="true2">$('<code class="code" data-html="true">body</code>,<code class="code" data-html="true">html</code>').animate({</span>
+								<span data-javascript="true" data-margin="true3">scrollTop: 0</span>
+								<span data-javascript="true" data-margin="true3">}, 400);</span>
+								<span data-javascript="true" data-margin="true2">return false;</span>
+								<span data-javascript="true" data-margin="true2">}):</span>
+								<span data-javascript="true" data-margin="true">});</span>
+								<span data-javascript="true">});</span>
+							</div>
+						</div>
+			</article>
+			<article>
+				<h1 class="title">Affichage de code perso</h1>
+				<div class="code-perso">
+					<div class="code-perso-line">
+						<span>1.</span>
+						<span>2.</span>
+						<span>3.</span>
+					</div>
+					<div class="code-perso-code">
+						<span data-javascript="true">$(document).ready( function() { </span>
+						<span data-javascript="true" data-margin="true">function()</span>
+						<span data-javascript="true">});</span>
+					</div>
+				</div>
+			</article>
+			<div class="separator"></div>
+			<div id="arrow-pages">
+				<div id="arrow-left">
+					<!--<a href="#" class="button">Page Précédente</a>-->
+				</div>
+				<div id="arrow-right">
+					<a href="code-page-2.html" class="button">Page Suivante</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<h1 class="title">Hello World! Si vous &ecirc;tes rendu ici c'est qu'il est temps de changer de page :)  Voi&ccedil;i quelques sugestions.</h1>
+			<table>
+				<tbody>
+					<tr>
+						<td><a href="#" class="footer-link">Acceuil</a></td>
+						<td><p class="footer-separator">|</p></td>
+						<td><a href="#" class="footer-link">Photos</a></td>
+						<td><p class="footer-separator">|</p></td>
+						<td><a href="#" class="footer-link">Social</a></td>
+						<td><p class="footer-separator">|</p></td>
+						<td><a href="#" class="footer-link">Coding</a></td>
+						<td><p class="footer-separator">|</p></td>
+						<td><a href="#" class="footer-link">Site Web</a></td>
+						<td><p class="footer-separator">|</p></td>
+						<td><a href="#" class="footer-link">Contact</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&copy; | 2012-2013 - version n&deg;2 | Mathieu Tremblay</p>
+		</footer>
+	</body>
+</html>

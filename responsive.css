@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+.devices{height:575px;overflow:hidden;position:relative}
+iframe{background-color:#fff;margin:0;padding:0;position:relative;transform-origin:top left}
+.mobile{background:url(http://i45.tinypic.com/245jzuv.png) no-repeat -278px -479px;height:251px;left:520px;position:absolute;top:330px;width:130px;z-index:3}
+.mobile iframe{-moz-transform:scale(0.332);-webkit-transform:scale(0.332);height:480px;left:10px;top:42px;transform:scale(0.332);width:320px}
+.tablet{background:url(http://i45.tinypic.com/245jzuv.png) no-repeat 0 -470px;height:348px;position:absolute;top:227px;width:264px;z-index:2}
+.tablet iframe{-moz-transform:scale(0.273);-webkit-transform:scale(0.273);height:1024px;left:26px;top:36px;transform:scale(0.273);width:768px}
+.desktop{background:url(http://i45.tinypic.com/245jzuv.png) no-repeat 0 0;height:457px;left:100px;position:absolute;top:0;width:594px}
+.desktop iframe{-moz-transform:scale(0.342);-webkit-transform:scale(0.342);height:900px;left:21px;top:26px;transform:scale(0.342);width:1600px}
+.url{margin:10px 0;padding:30px 30px 0}
+.url input{-moz-border-radius:5px;-webkit-border-radius:5px;border:2px solid #ff6400;border-radius:5px;color:#0096cf;font-family:'Press Start 2P', cursive;font-size:20px;opacity:.6;padding:5px;width:520px}
+.url button{-moz-border-radius:5px;-moz-transition:opacity 1s;-webkit-border-radius:5px;-webkit-transition:opacity 1s;background:#0096cf;border:1px solid #0096cf;border-radius:5px;color:#FFF;cursor:pointer;font-family:'Press Start 2P', cursive;font-size:20px;margin:0 10px;opacity:.6;padding:5px;transition:opacity 1s;width:80px}
+.url input:focus,.url button:hover{opacity:1}

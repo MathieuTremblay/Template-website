@@ -1,0 +1,16 @@
+body {
+	background-color: #000;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+#container {
+	width: 980px;
+	padding: 10px;
+	margin: 0;
+	background-color: #fff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
